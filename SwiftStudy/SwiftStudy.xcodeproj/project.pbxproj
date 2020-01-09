@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,18 @@
 		04157BDE23C70F1B0069FC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04157BDC23C70F1B0069FC15 /* Main.storyboard */; };
 		04157BE023C70F1D0069FC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04157BDF23C70F1D0069FC15 /* Assets.xcassets */; };
 		04157BE323C70F1D0069FC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04157BE123C70F1D0069FC15 /* LaunchScreen.storyboard */; };
+		04157BF023C7145C0069FC15 /* SCLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157BEF23C7145C0069FC15 /* SCLBaseViewController.swift */; };
+		04157BF223C7148E0069FC15 /* SCLBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157BF123C7148E0069FC15 /* SCLBaseNavigationViewController.swift */; };
+		04157BF423C714B00069FC15 /* SCLBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157BF323C714B00069FC15 /* SCLBaseTabBarController.swift */; };
+		04157BF723C716840069FC15 /* SCLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157BF623C716840069FC15 /* SCLHomeViewController.swift */; };
+		04157BFF23C718600069FC15 /* SCLMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157BFE23C718600069FC15 /* SCLMyViewController.swift */; };
+		04157C0123C718690069FC15 /* SCLFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0023C718690069FC15 /* SCLFindViewController.swift */; };
+		04157C0323C718750069FC15 /* SCLNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0223C718750069FC15 /* SCLNewsViewController.swift */; };
+		04157C0523C718BD0069FC15 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0423C718BD0069FC15 /* UIColorExtension.swift */; };
+		04157C0823C719C60069FC15 /* SCLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0723C719C60069FC15 /* SCLTabBar.swift */; };
+		04157C0A23C72D620069FC15 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0923C72D620069FC15 /* UIBarButtonItemExtension.swift */; };
+		04157C0C23C73ACD0069FC15 /* SCLWebBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157C0B23C73ACD0069FC15 /* SCLWebBaseViewController.swift */; };
+		1F3B71FA01185235216DAA1D /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB70F429B76DB4CA102433B /* Pods_SwiftStudy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,20 @@
 		04157BDF23C70F1D0069FC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04157BE223C70F1D0069FC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04157BE423C70F1D0069FC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04157BEF23C7145C0069FC15 /* SCLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLBaseViewController.swift; sourceTree = "<group>"; };
+		04157BF123C7148E0069FC15 /* SCLBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLBaseNavigationViewController.swift; sourceTree = "<group>"; };
+		04157BF323C714B00069FC15 /* SCLBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLBaseTabBarController.swift; sourceTree = "<group>"; };
+		04157BF623C716840069FC15 /* SCLHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLHomeViewController.swift; sourceTree = "<group>"; };
+		04157BFE23C718600069FC15 /* SCLMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLMyViewController.swift; sourceTree = "<group>"; };
+		04157C0023C718690069FC15 /* SCLFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLFindViewController.swift; sourceTree = "<group>"; };
+		04157C0223C718750069FC15 /* SCLNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLNewsViewController.swift; sourceTree = "<group>"; };
+		04157C0423C718BD0069FC15 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		04157C0723C719C60069FC15 /* SCLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLTabBar.swift; sourceTree = "<group>"; };
+		04157C0923C72D620069FC15 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		04157C0B23C73ACD0069FC15 /* SCLWebBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLWebBaseViewController.swift; sourceTree = "<group>"; };
+		280B1DFD4775D1E5CF9C8840 /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		4FB70F429B76DB4CA102433B /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5D63DACCBE89E1934A9404 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3B71FA01185235216DAA1D /* Pods_SwiftStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +69,8 @@
 			children = (
 				04157BD523C70F1B0069FC15 /* SwiftStudy */,
 				04157BD423C70F1B0069FC15 /* Products */,
+				91747B5093B22BAE00C267BE /* Pods */,
+				F3E3D4047972DF805802F5BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +85,9 @@
 		04157BD523C70F1B0069FC15 /* SwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				04157BFA23C716AA0069FC15 /* Extension */,
+				04157BF823C716950069FC15 /* Modules */,
+				04157BEB23C713D20069FC15 /* Base */,
 				04157BD623C70F1B0069FC15 /* AppDelegate.swift */,
 				04157BD823C70F1B0069FC15 /* SceneDelegate.swift */,
 				04157BDA23C70F1B0069FC15 /* ViewController.swift */,
@@ -67,6 +99,103 @@
 			path = SwiftStudy;
 			sourceTree = "<group>";
 		};
+		04157BEB23C713D20069FC15 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				04157C0623C719300069FC15 /* View */,
+				04157BEC23C713DB0069FC15 /* VC */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		04157BEC23C713DB0069FC15 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				04157BEF23C7145C0069FC15 /* SCLBaseViewController.swift */,
+				04157BF123C7148E0069FC15 /* SCLBaseNavigationViewController.swift */,
+				04157BF323C714B00069FC15 /* SCLBaseTabBarController.swift */,
+				04157C0B23C73ACD0069FC15 /* SCLWebBaseViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		04157BF823C716950069FC15 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				04157BFD23C716D20069FC15 /* News */,
+				04157BFC23C716C30069FC15 /* Find */,
+				04157BFB23C716BB0069FC15 /* My */,
+				04157BF923C7169F0069FC15 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		04157BF923C7169F0069FC15 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04157BF623C716840069FC15 /* SCLHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04157BFA23C716AA0069FC15 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04157C0423C718BD0069FC15 /* UIColorExtension.swift */,
+				04157C0923C72D620069FC15 /* UIBarButtonItemExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04157BFB23C716BB0069FC15 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				04157BFE23C718600069FC15 /* SCLMyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		04157BFC23C716C30069FC15 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				04157C0023C718690069FC15 /* SCLFindViewController.swift */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		04157BFD23C716D20069FC15 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				04157C0223C718750069FC15 /* SCLNewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		04157C0623C719300069FC15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04157C0723C719C60069FC15 /* SCLTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91747B5093B22BAE00C267BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				280B1DFD4775D1E5CF9C8840 /* Pods-SwiftStudy.debug.xcconfig */,
+				FA5D63DACCBE89E1934A9404 /* Pods-SwiftStudy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3E3D4047972DF805802F5BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FB70F429B76DB4CA102433B /* Pods_SwiftStudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04157BE723C70F1D0069FC15 /* Build configuration list for PBXNativeTarget "SwiftStudy" */;
 			buildPhases = (
+				467E9985C0EC6F56EBFFB837 /* [CP] Check Pods Manifest.lock */,
 				04157BCF23C70F1B0069FC15 /* Sources */,
 				04157BD023C70F1B0069FC15 /* Frameworks */,
 				04157BD123C70F1B0069FC15 /* Resources */,
+				D335DD06659A62F69189F624 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +224,7 @@
 		04157BCB23C70F1B0069FC15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SCL;
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = mac;
@@ -103,7 +235,7 @@
 				};
 			};
 			buildConfigurationList = 04157BCE23C70F1B0069FC15 /* Build configuration list for PBXProject "SwiftStudy" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -133,14 +265,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		467E9985C0EC6F56EBFFB837 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D335DD06659A62F69189F624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04157BCF23C70F1B0069FC15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04157BDB23C70F1B0069FC15 /* ViewController.swift in Sources */,
+				04157BF423C714B00069FC15 /* SCLBaseTabBarController.swift in Sources */,
 				04157BD723C70F1B0069FC15 /* AppDelegate.swift in Sources */,
+				04157BFF23C718600069FC15 /* SCLMyViewController.swift in Sources */,
+				04157BF023C7145C0069FC15 /* SCLBaseViewController.swift in Sources */,
+				04157C0C23C73ACD0069FC15 /* SCLWebBaseViewController.swift in Sources */,
+				04157C0523C718BD0069FC15 /* UIColorExtension.swift in Sources */,
+				04157C0A23C72D620069FC15 /* UIBarButtonItemExtension.swift in Sources */,
 				04157BD923C70F1B0069FC15 /* SceneDelegate.swift in Sources */,
+				04157C0323C718750069FC15 /* SCLNewsViewController.swift in Sources */,
+				04157C0823C719C60069FC15 /* SCLTabBar.swift in Sources */,
+				04157C0123C718690069FC15 /* SCLFindViewController.swift in Sources */,
+				04157BF723C716840069FC15 /* SCLHomeViewController.swift in Sources */,
+				04157BF223C7148E0069FC15 /* SCLBaseNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +467,7 @@
 		};
 		04157BE823C70F1D0069FC15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 280B1DFD4775D1E5CF9C8840 /* Pods-SwiftStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +486,7 @@
 		};
 		04157BE923C70F1D0069FC15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA5D63DACCBE89E1934A9404 /* Pods-SwiftStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
