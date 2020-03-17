@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
-import MJRefresh
 import SwiftyJSON
+import MJRefresh
+
 
 struct AppListItem {
     var applicationId: String!
@@ -153,19 +154,19 @@ class SCLLimitAppListController : SCLBaseViewController {
             return;
         }
         
-        provider.request(req) { (result) in
-            if case  let .success(response) = result {
-                let json = JSON(response.data)
-                let dataArr = json["applications"].arrayValue
-                for json in dataArr {
-                    var item = AppListItem()
-                    item = item.updateWithData(json: json)
-                    self.dataList.append(item)
-                }
-                self.tableView.mj_footer?.endRefreshing()
-                self.tableView.reloadData()
+        Network.request(req, success: { (json) in
+            let dataArr = json["applications"].arrayValue
+            for json in dataArr {
+                var item = AppListItem()
+                item = item.updateWithData(json: json)
+                self.dataList.append(item)
             }
-            
+            self.tableView.mj_footer?.endRefreshing()
+            self.tableView.reloadData()
+        }, error: { (statusCode) in
+            sclLog("错误状态码: \(statusCode)")
+        }) { (error) in
+            sclLog("报错信息: \(error.errorDescription ?? "呵呵")")
         }
         
     }

@@ -8,9 +8,7 @@
 
 import Foundation
 import Moya
-
-
-let  provider  = MoyaProvider<APPRequest>()
+import SwiftyJSON
 
 public enum APPRequest {
     case limitList(Int) //限免列表
@@ -49,46 +47,62 @@ extension APPRequest : TargetType {
     }
     
     public var task: Task {
+        var params: [String: Any] = [:]
         switch self {
         case .limitList(let page):
-            var params: [String: Any] = [:]
             params["page"] = page
             params["currency"] = "rmb"
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
         case .salesList(let page):
-            var params: [String: Any] = [:]
             params["page"] = page
             params["currency"] = "rmb"
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
         case .freeList(let page):
             var params: [String: Any] = [:]
             params["page"] = page
             params["currency"] = "rmb"
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
         case .appDetail(_):
             var params: [String: Any] = [:]
             params["currency"] = "rmb"
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
         case .recommendList(let lon, let lat):
             var params: [String: Any] = [:]
             params["currency"] = "rmb"
             params["longitude"] = lon
             params["latitude"] = lat
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
-            
         default:
             return .requestPlain
         }
+        return .requestParameters(parameters: params,
+                                  encoding: URLEncoding.default)
     }
     
     public var headers: [String : String]? {
         return nil
     }
     
-    
 }
+
+///略微封装一下
+struct Network {
+    static let Provider = MoyaProvider<APPRequest>()
+    static func request(_ target:APPRequest,
+                        success successCallBack: @escaping (JSON) -> Void,
+                        error errorCallBack: @escaping (Int) -> Void,
+                        fail failCallBcak: @escaping (MoyaError) -> Void){
+        Provider.request(target) { (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    try response.filterSuccessfulStatusCodes()
+                    let json = try JSON(response.mapJSON())
+                    successCallBack(json)
+                } catch let error {
+                    errorCallBack((error as! MoyaError).response!.statusCode)
+                }
+            case let .failure(error):
+                failCallBcak(error)
+            }
+        }
+        
+    }
+}
+
+
