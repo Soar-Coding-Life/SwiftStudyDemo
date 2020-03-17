@@ -9,7 +9,6 @@
 import UIKit
 
 class SCLBaseViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

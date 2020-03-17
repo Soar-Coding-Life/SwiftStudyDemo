@@ -16,10 +16,27 @@ import RxAlamofire
 import RxDataSources
 import Moya
 import IQKeyboardManagerSwift
-
+import Kingfisher
 
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
+let statusBarHeight : CGFloat = {
+    if #available(iOS 13.0, *){
+        let scene : UIWindowScene = UIApplication.shared.connectedScenes.first as! UIWindowScene
+        return (scene.statusBarManager?.statusBarFrame.size.height)!
+    }else{
+        return UIApplication.shared.statusBarFrame.size.height
+    }
+}()
+
+let navigationBarHeight = 44.0 + statusBarHeight
+var bottomHeight:CGFloat {
+    if isIphoneX {
+        return 34.0
+    }
+    return 0.0
+}
+
 
 var topVC: UIViewController? {
     var resultVC: UIViewController?
@@ -58,6 +75,7 @@ var isIphoneX: Bool {
     }
     return false
 }
+
 
 
 var isIpad : Bool  {
@@ -112,3 +130,19 @@ extension UICollectionView {
         }
     }
 }
+
+func openURL(scheme: String) {
+    if let url = URL(string: scheme) {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:],
+                                      completionHandler: {
+                                        (success)in
+                                        print("Open \(scheme): \(success)")
+            })
+        }else{
+            let success = UIApplication.shared.openURL(url)
+            print("Open \(scheme): \(success)")
+        }
+    }
+}
+

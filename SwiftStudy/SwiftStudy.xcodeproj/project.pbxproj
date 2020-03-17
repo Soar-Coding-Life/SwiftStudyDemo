@@ -28,6 +28,10 @@
 		04E2C4EE23CEF25C0092BFD5 /* SCLBindDataDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2C4EC23CEF25C0092BFD5 /* SCLBindDataDemoViewController.swift */; };
 		04E2C4EF23CEF25C0092BFD5 /* SCLBindDataDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E2C4ED23CEF25C0092BFD5 /* SCLBindDataDemoViewController.xib */; };
 		1F3B71FA01185235216DAA1D /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB70F429B76DB4CA102433B /* Pods_SwiftStudy.framework */; };
+		CA9C79702420BEDB00CA7955 /* AppLimitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C796F2420BEDB00CA7955 /* AppLimitAPI.swift */; };
+		CA9C79732420C9FE00CA7955 /* SCLLimitAppListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C79722420C9FE00CA7955 /* SCLLimitAppListController.swift */; };
+		CA9C79762420F14400CA7955 /* SCLAppListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C79742420F14400CA7955 /* SCLAppListItemCell.swift */; };
+		CA9C79772420F14400CA7955 /* SCLAppListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9C79752420F14400CA7955 /* SCLAppListItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		04E2C4ED23CEF25C0092BFD5 /* SCLBindDataDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCLBindDataDemoViewController.xib; sourceTree = "<group>"; };
 		280B1DFD4775D1E5CF9C8840 /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB70F429B76DB4CA102433B /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9C796F2420BEDB00CA7955 /* AppLimitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLimitAPI.swift; sourceTree = "<group>"; };
+		CA9C79722420C9FE00CA7955 /* SCLLimitAppListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLLimitAppListController.swift; sourceTree = "<group>"; };
+		CA9C79742420F14400CA7955 /* SCLAppListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLAppListItemCell.swift; sourceTree = "<group>"; };
+		CA9C79752420F14400CA7955 /* SCLAppListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCLAppListItemCell.xib; sourceTree = "<group>"; };
 		FA5D63DACCBE89E1934A9404 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +99,7 @@
 		04157BD523C70F1B0069FC15 /* SwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				CA9C796E2420BEAE00CA7955 /* API */,
 				04E2C4E823CEB8A70092BFD5 /* Global */,
 				04157BFA23C716AA0069FC15 /* Extension */,
 				04157BF823C716950069FC15 /* Modules */,
@@ -140,6 +149,7 @@
 		04157BF923C7169F0069FC15 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CA9C79712420C9D500CA7955 /* Limit */,
 				04E2C4EB23CEF2250092BFD5 /* Bind */,
 				04157BF623C716840069FC15 /* SCLHomeViewController.swift */,
 			);
@@ -211,6 +221,24 @@
 				FA5D63DACCBE89E1934A9404 /* Pods-SwiftStudy.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA9C796E2420BEAE00CA7955 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA9C796F2420BEDB00CA7955 /* AppLimitAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CA9C79712420C9D500CA7955 /* Limit */ = {
+			isa = PBXGroup;
+			children = (
+				CA9C79722420C9FE00CA7955 /* SCLLimitAppListController.swift */,
+				CA9C79742420F14400CA7955 /* SCLAppListItemCell.swift */,
+				CA9C79752420F14400CA7955 /* SCLAppListItemCell.xib */,
+			);
+			path = Limit;
 			sourceTree = "<group>";
 		};
 		F3E3D4047972DF805802F5BE /* Frameworks */ = {
@@ -286,6 +314,7 @@
 				04E2C4EF23CEF25C0092BFD5 /* SCLBindDataDemoViewController.xib in Resources */,
 				04157BE023C70F1D0069FC15 /* Assets.xcassets in Resources */,
 				04157BDE23C70F1B0069FC15 /* Main.storyboard in Resources */,
+				CA9C79772420F14400CA7955 /* SCLAppListItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,18 +367,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9C79762420F14400CA7955 /* SCLAppListItemCell.swift in Sources */,
 				04157BDB23C70F1B0069FC15 /* ViewController.swift in Sources */,
 				04157BF423C714B00069FC15 /* SCLBaseTabBarController.swift in Sources */,
 				04157BD723C70F1B0069FC15 /* AppDelegate.swift in Sources */,
 				04E2C4EE23CEF25C0092BFD5 /* SCLBindDataDemoViewController.swift in Sources */,
 				04157BFF23C718600069FC15 /* SCLMyViewController.swift in Sources */,
 				04157BF023C7145C0069FC15 /* SCLBaseViewController.swift in Sources */,
+				CA9C79732420C9FE00CA7955 /* SCLLimitAppListController.swift in Sources */,
 				04157C0C23C73ACD0069FC15 /* SCLWebBaseViewController.swift in Sources */,
 				04157C0523C718BD0069FC15 /* UIColorExtension.swift in Sources */,
 				04157C0A23C72D620069FC15 /* UIBarButtonItemExtension.swift in Sources */,
 				04157BD923C70F1B0069FC15 /* SceneDelegate.swift in Sources */,
 				04157C0323C718750069FC15 /* SCLNewsViewController.swift in Sources */,
 				04157C0823C719C60069FC15 /* SCLTabBar.swift in Sources */,
+				CA9C79702420BEDB00CA7955 /* AppLimitAPI.swift in Sources */,
 				04157C0123C718690069FC15 /* SCLFindViewController.swift in Sources */,
 				04E2C4EA23CEB95B0092BFD5 /* SCLGlobal.swift in Sources */,
 				04157BF723C716840069FC15 /* SCLHomeViewController.swift in Sources */,

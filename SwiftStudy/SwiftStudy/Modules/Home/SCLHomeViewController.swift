@@ -11,6 +11,7 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
+
 class SCLHomeViewController: SCLBaseViewController {
     lazy var tableView : UITableView = {
         let tab = UITableView(frame: view.bounds, style: .plain)
@@ -30,7 +31,9 @@ class SCLHomeViewController: SCLBaseViewController {
         self.navigationItem.title = "首页"
         let dataSource : [String] = [
             "UI与数据绑定",
-            "UI与数据绑定"
+            "限免应用",
+            "降价应用",
+            "免费应用"
         ]
         tableView
             .rx.contentOffset
@@ -46,7 +49,9 @@ class SCLHomeViewController: SCLBaseViewController {
         tableView.rx.itemSelected.subscribe(onNext: { (indexPath) in
             let vc = [
                 SCLBindDataDemoViewController(),
-                SCLBindDataDemoViewController(),
+                SCLLimitAppListController(type: .limit),
+                SCLLimitAppListController(type: .sales),
+                SCLLimitAppListController(type: .free),
                 ][indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
