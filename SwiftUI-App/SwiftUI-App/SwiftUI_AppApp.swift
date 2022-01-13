@@ -17,7 +17,12 @@ struct SwiftUI_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TabBar().accentColor(.orange)
+            TabBar()
+                .accentColor(.orange)
+                .onOpenURL(perform: { url in
+                    print(url)
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                })
         }
     }
     

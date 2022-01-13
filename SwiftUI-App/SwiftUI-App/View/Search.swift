@@ -16,6 +16,9 @@ struct Search: View {
                     Spacer().frame(height:30)
                     SearchBarView(searchText: $searchText).padding([.leading, .trailing], 12)
                     Spacer()
+                    TestUIKitView(imageName: "book.fill", text: "UIkit自定义View")
+                        .frame(width: 150, height: 150)
+                    Spacer()
                 }
             }
             .navigationBarTitle("搜索")

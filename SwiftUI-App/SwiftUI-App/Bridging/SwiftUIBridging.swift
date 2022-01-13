@@ -19,8 +19,35 @@ struct SwiftUIBridging: UIViewControllerRepresentable {
     }
 }
 
-struct TestUiKitView : View {
+struct TestUiKitVC : View {
     var body: some View {
         SwiftUIBridging()
+    }
+}
+
+
+struct UIKitView : UIViewRepresentable {
+    @Binding var imageName : String
+    @Binding var text : String
+
+    func makeUIView(context: Context) -> MyView {
+//        return MyView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//        return MyView(frame: .zero)
+        return MyView()
+    }
+    
+    func updateUIView(_ uiView: MyView, context: Context) {
+        uiView.textLabel.text = self.text ;
+        uiView.imageView.image = UIImage(systemName: self.imageName)
+    }
+    
+    typealias UIViewType = MyView
+}
+
+struct TestUIKitView : View {
+    @State var imageName:String = ""
+    @State var text : String = ""
+    var body: some View {
+        UIKitView(imageName: $imageName, text: $text)
     }
 }

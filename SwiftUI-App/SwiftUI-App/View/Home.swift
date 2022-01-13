@@ -12,8 +12,8 @@ struct Home: View {
         NavigationView {
             Group {
                 List {
-                    Section(header: Text("section header")) {
-                        NavigationLink(destination: TestUiKitView()) {
+                    Section(header: Text("组头")) {
+                        NavigationLink(destination: TestUiKitVC()) {
                             Text("SwiftUI与UIKit交互调用").frame(height: 50)
                         }
                         NavigationLink(destination: Search()) {
